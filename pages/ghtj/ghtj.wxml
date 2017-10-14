@@ -1,0 +1,59 @@
+
+
+
+
+<import src="../../wxParse/wxParse.wxml"/> 
+
+ <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+
+<!-- 
+<view class="page">
+    <view class="page__hd">
+        <view class="page__title">公众号推荐</view>
+        <view class="page__desc">觉得有需要的顺手点拨关注</view>
+    </view>
+    <view class="page__bd">
+        <view class="weui-article">
+          
+            <view class="weui-article__section">
+                 <view class="weui-article__title"></view> 
+                <view class="weui-article__section">
+                     <view class="weui-article__h3"></view> 
+                    <view class="weui-article__p">
+                         感谢以下公众号友情推广：
+                    </view>
+                      <view class="weui-article__p">
+                         励志程序员(lizhichengxuyuan)
+
+                    </view>
+                    <view class="weui-article__p">
+                         java版web项目(java_project)
+                    </view>
+                    <view class="weui-article__p">
+                         JAVA(javabaiwen)
+                    </view>
+                    <view class="weui-article__p">
+                         Java后端技术(javaITWork)
+                    </view>
+                      <view class="weui-article__p">
+                         IT哈哈(it_haha)
+                    </view>
+                       <view class="weui-article__p">
+                         Android进价之旅(ruicbAndroid)
+                    </view>
+                      <view class="weui-article__p">
+                        Java面试那些事(javatiku)
+                    </view>
+                      <view class="weui-article__p">
+                        java技术日志(javalog)
+                    </view>
+                     <view class="weui-article__p">
+                        安卓笔记侠(androidnotebyyifeng)
+                    </view>
+                      快速关注方式：点击右上角-点击关于java葵花宝典-点击相关公众号-关注  只需5秒
+                </view>
+            
+            </view>
+        </view>
+    </view>
+</view> -->

@@ -1,0 +1,39 @@
+<view class="page">
+    <view class="page__hd">
+        <view class="page__title">亲爱的体验者</view>
+        <view class="page__desc">您好：</view>
+    </view>
+    <view class="page__bd">
+        <view class="weui-article">
+          
+            <view class="weui-article__section">
+                <!-- <view class="weui-article__title">一些</view> -->
+                <view class="weui-article__section">
+                    <!-- <view class="weui-article__h3">程序员的思考</view> -->
+                    <view class="weui-article__p">
+                    首先真诚的向你们说声谢谢，因为有你们的使用才让我有了进一步完善的信心，一个好的产品需要不断的打磨才能绽放它应有的风采，
+                    我是一个个人开发者，产品拓展者，做这个产品的初心是为了让更多的同行朋友们有个方便的兑换资源场所，实体书以及技术资源不断
+                    更新，随着产品的迭代功能必定愈发完善，同时也呼吁更多的朋友将你们不用的书籍给到我兑换积分，一人一份知识，传递下去就是无
+                    限的知识，你们可以用兑换的积分来换取其他的资源书籍，避免蒙尘，同时在这里我也将自己收藏的书籍在平台上供大家免费兑换，私下
+                    更会收集更多的资源放在这个平台，有人问我这样做的目的是什么，当产品上线日访问量突破4.5万的时候，其实我已经感到满足和自豪，
+                    这段时间休假我会利用空余时间完善这个产品，让服务器保证稳定不宕机，如果有暂时访问不了的情况应该是在发版，后面会做个发版
+                    通知，如果这个平台一直有人用，我就会坚持维护迭代下去，由于用户量大不能保证所有的用户机器都能正常显示，小部分人如果首次功能异常的
+                    请退出微信进程再重新进入打开小程序或移除小程序进入，也可私聊小编解决，留言板免费开放，就不审核了，希望大家文明发言，谢谢
+
+
+
+                      
+                       <view class="weui-article__h3">私人微信：liuzhipeng886
+                         <button class="weui-btn mini-btn" type="primary" bindtap="fuzhi" size="mini">一键复制</button>
+                        </view>
+                      <view class="weui-article__h3">送给自己的鸡汤：众口难调，你永远无法满足所有人的胃口，高明的人会引导大家跟着自己的感觉走，而不是让自己跟着别人走</view>
+
+        
+                    </view>
+    
+                </view>
+            
+            </view>
+        </view>
+    </view>
+</view>

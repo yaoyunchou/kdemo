@@ -1,0 +1,60 @@
+<view class="page" >
+ 
+    <view class="page__bd">
+        <view class="weui-toptips weui-toptips_warn" wx:if="{{showTopTips}}">错误提示</view>
+
+        <view class="weui-cells__title">留言板</view>
+
+     <form bindsubmit="formBindsubmit"  report-submit='true' id="ly" bindreset="formReset">
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">
+                    <textarea name="word" class="weui-textarea" maxlength="150" value="{{initData}}"  style=" height: 4.3em" />
+                    <view class="weui-textarea-counter"></view>
+                </view>
+            </view>
+        </view>
+        <button class="weui-btn" type="primary" formType="submit"   >提交</button>
+     </form>
+         
+    </view>
+
+
+    <view class="weui-panel weui-panel_access">
+            <view class="weui-panel__hd">信件阁</view>
+            <view class="weui-panel__bd">
+
+               <block wx:for="{{wordList}}" wx:for-item="item">
+
+                <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+                    <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                        <image class="weui-media-box__thumb" src="{{item.headImage}}" />
+                    </view>
+                    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                        <view class="weui-media-box__title">{{item.nickName}}|{{item.createTime}}</view>
+                        <view class="weui-media-box__content">
+                            {{item.content}}
+                        </view>
+                        <form bindsubmit="hFsubmit"  report-submit='true'>
+                            <view wx:if="{{openid=='ozk7u0BemKfQPl5UraD9gbeF6lAQ'}}" class="weui-media-box__content">
+                              <input name='replyContent' />
+                              <input name='id' hidden="true" value='{{item.id}}' />
+                              <button class="weui-btn mini-btn" type="primary" formType="submit"   size="mini">回复</button>
+                            </view>
+                        </form>
+                        <view wx:if="{{item.replyContent!=null}}" class="weui-media-box__content">
+                           |作者回复：{{item.replyContent}}
+                        </view>
+                    </view>
+                </navigator>
+              </block>
+
+            </view>
+            <!-- <view class="weui-panel__ft">
+                <view class="weui-cell weui-cell_access weui-cell_link">
+                    <view class="weui-cell__bd">查看更多</view>
+                    <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+                </view>
+            </view> -->
+        </view>
+</view>

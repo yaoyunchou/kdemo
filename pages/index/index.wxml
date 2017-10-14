@@ -1,0 +1,140 @@
+<!--posts.wxml-->
+<!-- <view class="topics-main">
+  <view class="top-bar">
+
+    <view class="top-bar-item" >首页</view>
+    <view class="top-bar-item" id="coreDetail" catchtap="onTapTag">任务完成榜</view>
+    <view class="top-bar-item" id="dhbang" catchtap="onTapTag">兑换榜</view>
+    <view class="top-bar-item" id="toFanc" catchtap="onTapTag">致亲爱的</view>
+    <view class="top-bar-item" id="ghtj" catchtap="onTapTag">公号推荐</view>
+  </view>
+
+
+</view> -->
+<view class='user-center'>
+  <view class='user-bg'>
+    <image src="{{userInfo.avatarUrl}}" style="width:100;"></image>
+  </view>
+  <view class='turntable'>
+    <view class='sector {{currentNav==0?"on":""}}' data-index='3' bindtap="selectNave">
+      <view class='sector-in'>
+      </view>
+    </view>
+    <view class='sector {{currentNav==1?"on":""}}' data-index='0' bindtap="selectNave">
+      <view class='sector-in'>
+      </view>
+    </view>
+    <view class='sector {{currentNav==2?"on":""}}' data-index='1' bindtap="selectNave">
+      <view class='sector-in '>
+      </view>
+    </view>
+    <view class='sector {{currentNav==3?"on":""}}' data-index='2' bindtap="selectNave">
+      <view class='sector-in'>
+      </view>
+    </view>
+    <view class='indicator'>
+      <text>{{text}}</text>
+    </view>
+    <view class='text {{"text"+(index+1)}} '  wx:for="{{navData}}" wx:for-item="nav" data-index='{{index}}' bindtap="selectNave">
+      <view class='lzp icon-people'></view>
+      <view>{{nav.name}}</view>
+    </view>
+  </view>
+  <view class='left-tools'>
+    <view class='left-tool slideInLeft animated'  wx:for="{{leftNav}}" wx:for-item="children">
+      <view wx:for="{{children.text}}" wx:for-item="text">{{text}}</view>
+    </view>
+  </view>
+  <view class='right-tools'>
+   <view class='right-tool slideInRight animated'  wx:for="{{rightNav}}" wx:for-item="children">
+       <view wx:for="{{children.text}}" wx:for-item="text">{{text}}</view>
+    </view>
+  </view>
+</view>
+<view class='btns'>
+    <view bindtap="qiandao" class='index-btn qd'>
+      <view class='lzp icon-qiandao'></view>
+      <view >签到</view>
+    </view>
+    <view bindtap="choujiang" class='index-btn cj'>
+      <view class='lzp icon-choujiang01'></view>
+      <view>抽奖</view>
+    </view>
+</view>
+
+<!--index.wxml-->
+<view class="page">
+    <view class="page__hd">
+        <!-- <view class="page__title"> 
+         
+        </view> -->
+       
+        <view class="page__desc">
+        
+        <view class="classname" wx:if="{{openid!=null  }}">
+
+            <image src="{{userInfo.avatarUrl}}" style="width:30px; height: 30px;" ></image>
+            欢迎你，亲爱的{{userInfo.nickName}}~
+
+          
+        </view>
+        
+          <view class="classname" wx:if="{{openid==null}}">
+            <button class="weui-btn mini-btn" type="primary" bindtap="denglu" size="mini">登录</button>
+          </view> 
+       
+         
+      </view>
+        <view class="page__desc"> 我的积分:{{userInfo.coreNum}}</view>
+        <import src="../../wxParse/wxParse.wxml"/> 
+
+ <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+
+  <!-- 网格布局 -->
+ <!-- <view class="page__bd page__bd_spacing">
+
+        <view class="weui-flex">
+            <view class="weui-flex__item"><view class="placeholder"><button class="weui-btn mini-btn" type="primary" bindtap="qiandao" size="mini">签到</button></view></view>
+            <view class="weui-flex__item"><view class="placeholder"><button class="weui-btn mini-btn" type="primary" bindtap="choujiang" size="mini">抽奖</button></view></view>
+        </view>
+
+  </view> -->
+
+  </view>
+<view class="page__bd">
+       
+   <view class="weui-cells__title">虚拟秘籍</view>
+    <view class="weui-cells weui-cells_after-title">
+            <block wx:for="{{xnList.body}}" wx:for-item="item">
+             <navigator url="../goodsDetail/goodsDetail?id={{item.id}}" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__hd">
+                    <image src="{{item.imageUrl}}" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+                </view>
+                <view class="weui-cell__bd">{{item.title}}</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access">{{item.codeNum}}积分</view>
+            </navigator>
+            </block>
+    </view>
+
+
+  <view class="weui-cells__title">实体书籍(兑换包邮)</view>
+    <view class="weui-cells weui-cells_after-title">
+          <block wx:for="{{swList.body}}" wx:for-item="item">
+             <navigator url="../goodsDetail/goodsDetail?id={{item.id}}" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__hd">
+                    <image src="{{item.imageUrl}}" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+                </view>
+                <view class="weui-cell__bd">{{item.title}}</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access">{{item.codeNum}}积分</view>
+            </navigator>
+            </block>
+
+
+        </view>
+    </view> 
+
+ 
+ 
+
+
+</view>

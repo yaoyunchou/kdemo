@@ -1,0 +1,49 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/word/word",
+    "pages/person/person",
+    "pages/goodsDetail/goodsDetail",
+    "pages/personInfo/personInfo",
+    "pages/member/member",
+    "pages/coreDetail/coreDetail",
+    "pages/duihuan/duihuan",
+    "pages/msg/msg",
+    "pages/about/about",
+    "pages/dhDetail/dhDetail",
+    "pages/dhbang/dhbang",
+    "pages/toFanc/toFanc",
+    "pages/ghtj/ghtj"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "葵花宝典",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "iconPath": "images/main.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "iconPath": "images/word.png",
+        "pagePath": "pages/word/word",
+        "text": "留言"
+      },
+      {
+        "iconPath": "images/person.png",
+        "pagePath": "pages/person/person",
+        "text": "个人中心"
+      },
+      {
+        "iconPath": "images/jf.png",
+        "pagePath": "pages/about/about",
+        "text": "初心与合作"
+      }
+    ]
+  },
+  "debug": false
+}

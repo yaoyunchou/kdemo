@@ -1,0 +1,32 @@
+<view class="page">
+    <view class="page__hd">
+        <view class="page__title">宝典只是一种工具：</view>
+        <view class="page__desc">成功的人应当具备耐心和孤独</view>
+    </view>
+    <view class="page__bd">
+
+         <form bindsubmit="formBindsubmit" report-submit='true' id="dh">
+
+            <view class="weui-form-preview">
+                <view class="weui-form-preview__hd">
+                    <view class="weui-form-preview__item">
+                        <view class="weui-form-preview__label">支付积分</view>
+                        <view class="weui-form-preview__value_in-hd">{{prize.codeNum}}</view>
+                    </view>
+                </view>
+                <view class="weui-form-preview__bd">
+                    <view class="weui-form-preview__item">
+                        <view class="weui-form-preview__label">秘籍名称</view>
+                        <view class="weui-form-preview__value">{{prize.title}}</view>
+                    </view>
+                    <view class="weui-form-preview__item">
+                        <view class="weui-form-preview__label">简述</view>
+                        <view class="weui-form-preview__value">{{prize.des}}</view>
+                    </view>
+                </view>
+                
+                  <button class="weui-btn" formType="submit" type="primary">兑换</button>
+            </view>
+        </form>
+    </view>
+</view>

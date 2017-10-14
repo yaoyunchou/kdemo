@@ -1,0 +1,30 @@
+
+<view class="page">
+    <view class="page__hd">
+        <view class="page__title">宝典只是一种工具：</view>
+        <view class="page__desc">成功的人应当具备耐心和孤独|网盘地址有问题请留言或私聊</view>
+    </view>
+    <view class="page__bd">
+        <view class="weui-form-preview">
+            <view class="weui-form-preview__hd">
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">名称</view>
+                    <view class="weui-form-preview__value_in-hd">{{model.title}}</view>
+                </view>
+            </view>
+            <view class="weui-form-preview__bd">
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">网盘地址 <button class="weui-btn mini-btn" type="primary" bindtap="fuzhi" size="mini">复制</button></view>
+                    <view  class="weui-form-preview__value">
+                      <text selectable="true"  >  {{model.content}}</text>
+                   </view>
+                </view>
+              
+            </view>
+              <navigator delta="1" open-type="navigateBack">
+               <button class="weui-btn" bindtap="duihuan" type="primary">返回</button>
+              </navigator>
+        </view>
+  
+    </view>
+</view>
